@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @AllArgsConstructor
-public enum YakıtTuru {
+public enum YakitTuru {
 
     BENZIN("Benzin"),
     BENZIN_LPG("Benzin & LPG"),

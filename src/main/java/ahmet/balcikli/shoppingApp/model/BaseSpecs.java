@@ -24,7 +24,7 @@ public class BaseSpecs {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "yakit")
-    private YakıtTuru yakit;
+    private YakitTuru yakit;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "vites")
