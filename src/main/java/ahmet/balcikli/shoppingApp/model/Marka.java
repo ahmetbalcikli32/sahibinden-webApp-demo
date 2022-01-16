@@ -19,6 +19,10 @@ public class Marka {
     @Column(name = "marka_adi", length = 30)
     private String markaAdi;
 
+    @OneToOne
+    @JoinColumn(name = "altkategori_id", foreignKey = @ForeignKey(name = "fk_marka_altkategori"))
+    private AltKategori altKategori;
+
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "marka")
     private List<Seri> seriList;
 

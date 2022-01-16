@@ -1,10 +1,7 @@
 package ahmet.balcikli.shoppingApp.controller;
 
 import ahmet.balcikli.shoppingApp.dto.MarkaDTO;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -14,6 +11,9 @@ public interface IMarkaController {
 
     @GetMapping
     List<MarkaDTO> findAll();
+
+    @GetMapping(params = "subcategory_id")
+    List<MarkaDTO> findByAltKategoriId(@RequestParam("subcategory_id") int subCategoryId);
 
     @GetMapping("/{id}")
     MarkaDTO findById(@PathVariable int id);

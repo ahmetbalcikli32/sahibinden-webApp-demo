@@ -24,6 +24,11 @@ public class MarkaControllerImpl implements IMarkaController {
     }
 
     @Override
+    public List<MarkaDTO> findByAltKategoriId(int subCategoryId) {
+        return markaMapper.entityList2DtoList(markaService.findByAltKategori(subCategoryId));
+    }
+
+    @Override
     public MarkaDTO findById(int id) {
         return markaMapper.entity2Dto(markaService.findById(id));
     }

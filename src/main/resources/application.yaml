@@ -12,5 +12,8 @@ spring:
         properties:
             hibernate:
                 dialect: org.hibernate.dialect.PostgreSQL10Dialect
-
+    sql:
+        init:
+            mode: never
+            data-locations: data.sql
 

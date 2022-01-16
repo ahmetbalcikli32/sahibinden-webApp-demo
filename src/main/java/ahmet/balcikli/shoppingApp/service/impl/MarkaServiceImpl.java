@@ -21,6 +21,11 @@ public class MarkaServiceImpl implements IMarkaService {
     }
 
     @Override
+    public List<Marka> findByAltKategori(int subCategoryId) {
+        return markaRepository.findByAltKategoriId(subCategoryId).orElse(null);
+    }
+
+    @Override
     public Marka findById(int id) {
         return markaRepository.findById(id).orElseThrow(() -> new EntityNotFoundException(id + " id'li marka bulunamadı!"));
     }

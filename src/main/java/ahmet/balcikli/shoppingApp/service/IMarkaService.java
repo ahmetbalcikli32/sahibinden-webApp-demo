@@ -8,5 +8,7 @@ public interface IMarkaService {
 
     List<Marka> findAll();
 
+    List<Marka> findByAltKategori(int subCategoryId);
+
     Marka findById(int id);
 }
