@@ -10,5 +10,5 @@ public class KategoriDTO {
 
     private int id;
     private String adi;
-    private List<AltKategori> altKategoriList;
+    private List<AltKategoriDTO> altKategoriList;
 }
